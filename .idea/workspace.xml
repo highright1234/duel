@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b961eff3-06ec-4047-bd00-c16f93b0bf23" name="Default Changelist" comment="Update: Add InventoryGUI">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/projecttl/plugin/duel/DuelPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/projecttl/plugin/duel/DuelPlugin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
-    </list>
+    <list default="true" id="b961eff3-06ec-4047-bd00-c16f93b0bf23" name="Default Changelist" comment="Update: Add listener and debug command" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,6 +37,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -179,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612525595335</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update: Add listener and debug command">
+      <created>1612526886972</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1612526886972</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,6 +202,7 @@
     <MESSAGE value="command update" />
     <MESSAGE value="Remove: Remove build file" />
     <MESSAGE value="Update: Add InventoryGUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update: Add InventoryGUI" />
+    <MESSAGE value="Update: Add listener and debug command" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update: Add listener and debug command" />
   </component>
 </project>

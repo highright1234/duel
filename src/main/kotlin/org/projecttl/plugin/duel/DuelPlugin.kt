@@ -5,6 +5,7 @@ import org.bukkit.configuration.file.FileConfiguration
 import org.bukkit.configuration.file.YamlConfiguration
 import org.bukkit.plugin.java.JavaPlugin
 import org.projecttl.plugin.duel.commands.GUIItemAdder
+import org.projecttl.plugin.duel.commands.arguments.ArgumentForItemAdder
 import org.projecttl.plugin.duel.listeners.DuelGUIListener
 import java.io.File
 
@@ -18,7 +19,9 @@ class DuelPlugin: JavaPlugin() {
         load()
         logger.info("Plugin has enabled.")
         getCommand("duel")?.setExecutor(Commands())
+
         getCommand("duelCommand")?.setExecutor(GUIItemAdder())
+        getCommand("duelCommand")?.tabCompleter = ArgumentForItemAdder()
 
         manager.registerEvents(DuelGUIListener(), this)
         /*
