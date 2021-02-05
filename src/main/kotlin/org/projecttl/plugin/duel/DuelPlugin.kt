@@ -9,10 +9,16 @@ class DuelPlugin: JavaPlugin() {
 
     private var configFile: File? = null
     private var configuration: FileConfiguration? = null
+    private val manager = server.pluginManager
 
     override fun onEnable() {
         load()
         logger.info("Plugin has enabled.")
+        
+        /*
+         * Command: getCommand("example")?.setExecutor(ExampleClass())
+         * Listener: manager.registerEvents(ExampleClass(), this)
+         */
     }
 
     override fun onDisable() {
