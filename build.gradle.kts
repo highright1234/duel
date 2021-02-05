@@ -17,8 +17,9 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
-    implementation("mysql:mysql-connector-java")
+
     compileOnly("com.destroystokyo.paper:paper-api:1.16.5-R0.1-SNAPSHOT")
+    compileOnly("com.github.ProjectTL12345:InventoryGUI:1.2v")
 }
 
 val shade = configurations.create("shade")
