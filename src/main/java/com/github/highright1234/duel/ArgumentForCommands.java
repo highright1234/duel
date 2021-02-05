@@ -18,7 +18,7 @@ public class ArgumentForCommands implements TabCompleter {
                     ArrayList<String> firstArgument = new ArrayList<>();
                     firstArgument.add("accept");
                     firstArgument.add("deny");
-                    firstArgument.add("send");
+                    firstArgument.add("invite");
 
                     return firstArgument;
                 }

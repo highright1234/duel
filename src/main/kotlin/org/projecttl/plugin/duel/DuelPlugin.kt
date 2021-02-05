@@ -1,5 +1,6 @@
 package org.projecttl.plugin.duel
 
+import com.github.highright1234.duel.ArgumentForCommands
 import com.github.highright1234.duel.Commands
 import org.bukkit.configuration.file.FileConfiguration
 import org.bukkit.configuration.file.YamlConfiguration
@@ -19,7 +20,7 @@ class DuelPlugin: JavaPlugin() {
         load()
         logger.info("Plugin has enabled.")
         getCommand("duel")?.setExecutor(Commands())
-        getCommand("duel")?.tabCompleter = ArgumentForItemAdder()
+        getCommand("duel")?.tabCompleter = ArgumentForCommands()
 
         getCommand("duelitem")?.setExecutor(GUIItemAdder())
         getCommand("duelitem")?.tabCompleter = ArgumentForItemAdder()
