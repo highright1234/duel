@@ -1,1 +1,0 @@
-C:\Users\USER\IdeaProjects\duel\build\classes\java\main\com\github\highright1234\duel\Commands.class;C:\Users\USER\IdeaProjects\duel\build\classes\kotlin\main\org\projecttl\plugin\duel\DuelPlugin.class
