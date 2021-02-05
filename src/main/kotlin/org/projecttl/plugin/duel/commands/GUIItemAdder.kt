@@ -23,13 +23,13 @@ class GUIItemAdder: CommandExecutor {
                     // Debug Code
                     args.size == 1 -> {
                         if (args[0].equals("gui", true)) {
-                            val itemStack = ItemStack(Material.CLOCK).let {
-                                val meta = it.itemMeta
-                                meta.displayName.equals(duelGui.displayName,true)
-
-                                it.itemMeta = meta
+                            val itemStack = ItemStack(Material.CLOCK)
+                            val meta = itemStack.itemMeta.let {
+                                it.displayName.equals(duelGui.displayName, true)
                                 it
                             }
+
+                            itemStack.itemMeta = meta
 
                             sender.inventory.addItem(itemStack)
                             return true
