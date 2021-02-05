@@ -29,6 +29,7 @@ class DuelPlugin: JavaPlugin() {
         /* 하이라이트를 위한 메뉴얼
          * Command: getCommand("example")?.setExecutor(ExampleClass())
          * Listener: manager.registerEvents(ExampleClass(), this)
+         * TabListener: getCommand("example")?.tabCompleter = ArgumentForItemAdder()
          */
     }
 
