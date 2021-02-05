@@ -25,7 +25,7 @@ class DuelPlugin: JavaPlugin() {
         getCommand("duelitem")?.tabCompleter = ArgumentForItemAdder()
 
         manager.registerEvents(DuelGUIListener(), this)
-        /*
+        /* 하이라이트를 위한 메뉴얼
          * Command: getCommand("example")?.setExecutor(ExampleClass())
          * Listener: manager.registerEvents(ExampleClass(), this)
          */
