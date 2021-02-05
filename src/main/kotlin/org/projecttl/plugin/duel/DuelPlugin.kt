@@ -4,6 +4,8 @@ import com.github.highright1234.duel.Commands
 import org.bukkit.configuration.file.FileConfiguration
 import org.bukkit.configuration.file.YamlConfiguration
 import org.bukkit.plugin.java.JavaPlugin
+import org.projecttl.plugin.duel.commands.GUIItemAdder
+import org.projecttl.plugin.duel.listeners.DuelGUIListener
 import java.io.File
 
 class DuelPlugin: JavaPlugin() {
@@ -16,7 +18,9 @@ class DuelPlugin: JavaPlugin() {
         load()
         logger.info("Plugin has enabled.")
         getCommand("duel")?.setExecutor(Commands())
-        
+        getCommand("duelCommand")?.setExecutor(GUIItemAdder())
+
+        manager.registerEvents(DuelGUIListener(), this)
         /*
          * Command: getCommand("example")?.setExecutor(ExampleClass())
          * Listener: manager.registerEvents(ExampleClass(), this)

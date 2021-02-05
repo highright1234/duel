@@ -3,7 +3,12 @@ author: $pluginAuthor
 version: $pluginVersion
 api-version: 1.16
 main: $pluginMain
+
 commands:
   duel:
     description: 듀얼 커맨드입니다
     usage: /duel help
+
+  duelitem:듀얼 아이템을 꺼내는 커맨드 입니다. (디버그용)
+      description:
+    usage: /duelitem <itemname>
