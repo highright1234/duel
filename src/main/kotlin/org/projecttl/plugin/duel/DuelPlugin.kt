@@ -21,8 +21,8 @@ class DuelPlugin: JavaPlugin() {
         getCommand("duel")?.setExecutor(Commands())
         getCommand("duel")?.tabCompleter = ArgumentForItemAdder()
 
-        getCommand("duelCommand")?.setExecutor(GUIItemAdder())
-        getCommand("duelCommand")?.tabCompleter = ArgumentForItemAdder()
+        getCommand("duelitem")?.setExecutor(GUIItemAdder())
+        getCommand("duelitem")?.tabCompleter = ArgumentForItemAdder()
 
         manager.registerEvents(DuelGUIListener(), this)
         /*

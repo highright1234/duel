@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b961eff3-06ec-4047-bd00-c16f93b0bf23" name="Default Changelist" comment="Add: Adding ItemAdder TabCompleter">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/highright1234/duel/ArgumentForCommands.java" afterDir="false" />
+    <list default="true" id="b961eff3-06ec-4047-bd00-c16f93b0bf23" name="Default Changelist" comment="Add: Adding Commands TabCompleter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/projecttl/plugin/duel/DuelPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/projecttl/plugin/duel/DuelPlugin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612527299614</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add: Adding Commands TabCompleter">
+      <created>1612528229787</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1612528229787</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -216,6 +220,7 @@
     <MESSAGE value="Update: Add InventoryGUI" />
     <MESSAGE value="Update: Add listener and debug command" />
     <MESSAGE value="Add: Adding ItemAdder TabCompleter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add: Adding ItemAdder TabCompleter" />
+    <MESSAGE value="Add: Adding Commands TabCompleter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add: Adding Commands TabCompleter" />
   </component>
 </project>
