@@ -1,0 +1,7 @@
+name: Duel
+version: @version@
+main: com.github.highright1234.Duel
+api-version: 1.16
+command:
+  duel:
+    
