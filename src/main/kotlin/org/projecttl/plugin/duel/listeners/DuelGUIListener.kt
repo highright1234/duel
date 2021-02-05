@@ -26,7 +26,7 @@ class DuelGUIListener: Listener {
 
         if (action == Action.RIGHT_CLICK_AIR || action == Action.RIGHT_CLICK_BLOCK) {
             if (player.inventory.itemInMainHand.type == Material.CLOCK) {
-                if (player.inventory.itemInMainHand.itemMeta.displayName.equals(displayName, true)) {
+                if (player.inventory.itemInMainHand.itemMeta.displayName === displayName) {
                     val inventory = Bukkit.createInventory(null, 45, displayName).let {
                         guiItem.onCreateItem(
                             it,
