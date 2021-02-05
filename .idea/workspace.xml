@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b961eff3-06ec-4047-bd00-c16f93b0bf23" name="Default Changelist" comment="init" />
+    <list default="true" id="b961eff3-06ec-4047-bd00-c16f93b0bf23" name="Default Changelist" comment="Remove: Remove build file">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +71,12 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Gradle.duel [build]">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="gradle clean" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Gradle.duel [clean]">
     <configuration name="duel [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -84,6 +92,27 @@
           </list>
         </option>
         <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="duel [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
       </ExternalSystemSettings>
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
@@ -113,6 +142,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.duel [clean]" />
         <item itemvalue="Gradle.duel [build]" />
       </list>
     </recent_temporary>
@@ -133,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612524230985</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Remove: Remove build file">
+      <created>1612525140162</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1612525140162</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -150,6 +187,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="command update" />
-    <option name="LAST_COMMIT_MESSAGE" value="command update" />
+    <MESSAGE value="Remove: Remove build file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove: Remove build file" />
   </component>
 </project>
