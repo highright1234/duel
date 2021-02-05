@@ -3,3 +3,7 @@ author: $pluginAuthor
 version: $pluginVersion
 api-version: 1.16
 main: $pluginMain
+commands:
+  duel:
+    description: 듀얼 커맨드입니다
+    usage: /duel help
