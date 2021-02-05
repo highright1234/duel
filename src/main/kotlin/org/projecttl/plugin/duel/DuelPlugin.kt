@@ -1,5 +1,6 @@
 package org.projecttl.plugin.duel
 
+import com.github.highright1234.duel.Commands
 import org.bukkit.configuration.file.FileConfiguration
 import org.bukkit.configuration.file.YamlConfiguration
 import org.bukkit.plugin.java.JavaPlugin
@@ -14,6 +15,7 @@ class DuelPlugin: JavaPlugin() {
     override fun onEnable() {
         load()
         logger.info("Plugin has enabled.")
+        getCommand("duel")?.setExecutor(Commands())
         
         /*
          * Command: getCommand("example")?.setExecutor(ExampleClass())

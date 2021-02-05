@@ -1,8 +1,8 @@
 name: duel
-author: $pluginAuthor
-version: $pluginVersion
+author: Project_TL & Highright
+version: 0.0.1
 api-version: 1.16
-main: $pluginMain
+main: org.projecttl.plugin.duel.DuelPlugin
 commands:
   duel:
     description: 듀얼 커맨드입니다

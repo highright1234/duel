@@ -1,0 +1,2 @@
+com/github/highright1234/duel/Commands.java
+ com.github.highright1234.duel.Commands
