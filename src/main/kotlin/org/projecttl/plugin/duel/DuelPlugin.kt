@@ -19,6 +19,7 @@ class DuelPlugin: JavaPlugin() {
         load()
         logger.info("Plugin has enabled.")
         getCommand("duel")?.setExecutor(Commands())
+        getCommand("duel")?.tabCompleter = ArgumentForItemAdder()
 
         getCommand("duelCommand")?.setExecutor(GUIItemAdder())
         getCommand("duelCommand")?.tabCompleter = ArgumentForItemAdder()
