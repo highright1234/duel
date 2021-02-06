@@ -8,6 +8,7 @@ import org.bukkit.plugin.java.JavaPlugin
 import org.projecttl.plugin.duel.commands.GUIItemAdder
 import org.projecttl.plugin.duel.commands.arguments.ArgumentForItemAdder
 import org.projecttl.plugin.duel.listeners.DuelGUIListener
+import org.projecttl.plugin.duel.listeners.PlayerDeathListener
 import java.io.File
 
 class DuelPlugin: JavaPlugin() {
@@ -26,6 +27,7 @@ class DuelPlugin: JavaPlugin() {
         getCommand("duelitem")?.tabCompleter = ArgumentForItemAdder()
 
         manager.registerEvents(DuelGUIListener(), this)
+        manager.registerEvents(PlayerDeathListener(), this)
         /* 하이라이트를 위한 메뉴얼
          * Command: getCommand("example")?.setExecutor(ExampleClass())
          * Listener: manager.registerEvents(ExampleClass(), this)

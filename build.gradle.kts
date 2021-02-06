@@ -17,6 +17,7 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
+    implementation("org.mariadb.jdbc:mariadb-java-client:2.7.0")
 
     compileOnly("com.destroystokyo.paper:paper-api:1.16.5-R0.1-SNAPSHOT")
     compileOnly("com.github.ProjectTL12345:InventoryGUI:1.2v")

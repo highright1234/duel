@@ -21,20 +21,24 @@ public class Commands implements CommandExecutor {
         if (command.getName().equals("duel")) {
             if (sender instanceof Player) {
                 if (args.length == 1) {
-                    switch (args[0]) {
-                        case "help":
-                            send_help(sender);
-                            return true;
-                        case "invite":
-                            sender.sendMessage("/duel invite <플레이어이름>");
-                            return true;
-                        case "accept":
-                            sender.sendMessage("/duel accept <플레이어이름>");
-                            return true;
-                        case "deny":
-                            sender.sendMessage("/duel deny <플레이어이름>");
-                            return true;
-                    } // 스위치 끝
+                    if (!Before.playing) {
+                        switch (args[0]) {
+                            case "help":
+                                send_help(sender);
+                                return true;
+                            case "invite":
+                                sender.sendMessage("/duel invite <플레이어이름>");
+                                return true;
+                            case "accept":
+                                sender.sendMessage("/duel accept <플레이어이름>");
+                                return true;
+                            case "deny":
+                                sender.sendMessage("/duel deny <플레이어이름>");
+                                return true;
+                        } // 스위치 끝
+                    } else {
+                        sender.sendMessage("게임이 이미 작동중입니다.");
+                    }
                 } /*길이가 1일시*/ else if (args.length >= 2) {
                     Player player = Bukkit.getPlayerExact(args[1]);
                     if (player != null && (args[0].equals("accept") || args[0].equals("deny") || args[0].equals("invite"))) {

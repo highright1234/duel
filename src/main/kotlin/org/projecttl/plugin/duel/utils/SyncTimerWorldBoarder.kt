@@ -6,7 +6,7 @@ class SyncTimerWorldBoarder {
         // TODO Set Default Logic
     }
 
-    fun queryWorldBoarder() {
+    fun queryWorldBoarder(getCount: Int) {
         // TODO Query WorldBoarder
     }
 }
