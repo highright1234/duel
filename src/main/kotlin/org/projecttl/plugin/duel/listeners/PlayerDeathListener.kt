@@ -5,9 +5,10 @@ import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.entity.PlayerDeathEvent
+import org.projecttl.plugin.duel.DuelPlugin
 import org.projecttl.plugin.duel.utils.EndGame
 
-class PlayerDeathListener: Listener {
+class PlayerDeathListener(private val plugin: DuelPlugin): Listener {
 
     private var redPlayer: Player = Before.redPlayer
     private var bluePlayer: Player = Before.bluePlayer
@@ -17,9 +18,9 @@ class PlayerDeathListener: Listener {
         if (Before.playing) {
 
             if (redPlayer.isDead) {
-                EndGame(bluePlayer)
+                EndGame(plugin, bluePlayer, redPlayer)
             } else if (bluePlayer.isDead) {
-                EndGame(redPlayer)
+                EndGame(plugin, redPlayer, bluePlayer)
             }
         }
     }

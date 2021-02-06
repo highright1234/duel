@@ -6,6 +6,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.projecttl.plugin.duel.DuelPlugin;
 
 public class Commands implements CommandExecutor {
     private void send_help(CommandSender sender) {
@@ -16,10 +17,18 @@ public class Commands implements CommandExecutor {
         sender.sendMessage("=========================");
     }
 
+    private final DuelPlugin plugin;
+
+    public Commands(DuelPlugin plugin) {
+        this.plugin = plugin;
+    }
+
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (command.getName().equals("duel")) {
             if (sender instanceof Player) {
+                Before before = new Before(plugin);
+
                 if (args.length == 1) {
                     if (!Before.playing) {
                         switch (args[0]) {
@@ -46,7 +55,7 @@ public class Commands implements CommandExecutor {
                             sender.sendMessage("굳");
                             switch (args[0]) {
                                 case "accept":
-                                    Before.before_setting(null, null);
+                                    before.before_setting((Player) sender, player);
                                 case "invite":
 
                                 case "deny":

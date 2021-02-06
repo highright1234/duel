@@ -1,9 +1,11 @@
 package org.projecttl.plugin.duel.utils
 
-class SyncTimerWorldBoarder {
+import org.projecttl.plugin.duel.DuelPlugin
+
+class SyncTimerWorldBoarder(private val plugin: DuelPlugin) {
 
     fun setDefault() {
-        // TODO Set Default Logic
+        GameTimer(plugin).runTimer()
     }
 
     fun queryWorldBoarder(getCount: Int) {

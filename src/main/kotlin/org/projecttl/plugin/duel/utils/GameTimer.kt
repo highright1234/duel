@@ -10,15 +10,16 @@ import org.bukkit.scoreboard.Scoreboard
 import org.projecttl.plugin.duel.DuelPlugin
 
 @Suppress("DEPRECATION")
-class GameTimer(private var player: Player, private val plugin: DuelPlugin) {
+class GameTimer(private val plugin: DuelPlugin) {
 
-    private var count: Int = 300 // Game Time is 5 Minutes
+    private var count: Int? = null
 
     private var objective: Objective
     private var timerBoard: Scoreboard? = null
     private var timerObject: Objective? = null
 
     init {
+        count = 300 // Game Time is 5 Minutes
         val scoreboard: Scoreboard = Bukkit.getServer().scoreboardManager.newScoreboard.let {
             objective = it.registerNewObjective("Left_Time", "dummy", "${ChatColor.GREEN}Left Time")
 
@@ -36,9 +37,9 @@ class GameTimer(private var player: Player, private val plugin: DuelPlugin) {
     }
 
     private fun timerFunction() {
-        count--
+        count = count!! - 1
         val score: Score = objective.getScore(Bukkit.getOfflinePlayer("${ChatColor.GREEN}Time:"))
-        score.score = count
+        score.score = count!!
 
         if (count == 0) {
             plugin.server.scheduler.cancelTasks(plugin)
