@@ -6,6 +6,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import com.github.highright1234.duel.before;
 
 public class Commands implements CommandExecutor {
     private void send_help(CommandSender sender) {
@@ -38,7 +39,19 @@ public class Commands implements CommandExecutor {
                 } /*길이가 1일시*/ else if (args.length >= 2) {
                     Player player = Bukkit.getPlayerExact(args[1]);
                     if (player != null && (args[0].equals("accept") || args[0].equals("deny") || args[0].equals("invite"))) {
-                        sender.sendMessage("굳");
+                        if (before.check_playing()) {
+                            sender.sendMessage("굳");
+                            switch (args[0]) {
+                                case "accept":
+                                    before.before_setting(null, null);
+                                case "invite":
+
+                                case "deny":
+
+                            }
+                         } else {
+                            sender.sendMessage("이미 누군가 플레이중입니다");
+                        }
                         return true;
                     } else if (args[0].equals("accept") || args[0].equals("deny") || args[0].equals("invite")) {
                         sender.sendMessage("플레이어가 오프라인입니다!");
