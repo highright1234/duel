@@ -12,7 +12,7 @@ import org.projecttl.plugin.duel.DuelPlugin
 @Suppress("DEPRECATION")
 class GameTimer(private var player: Player, private val plugin: DuelPlugin) {
 
-    var count: Int = 300
+    private var count: Int = 300 // Game Time is 5 Minutes
 
     private var objective: Objective
     private var timerBoard: Scoreboard? = null

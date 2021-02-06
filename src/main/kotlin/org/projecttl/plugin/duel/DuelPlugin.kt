@@ -54,6 +54,6 @@ class DuelPlugin: JavaPlugin() {
     }
 
     fun duelConfig(): FileConfiguration {
-        return configuration!!
+        return configuration!! // This is yaml config
     }
 }
