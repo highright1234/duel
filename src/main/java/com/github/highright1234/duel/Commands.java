@@ -6,7 +6,6 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import com.github.highright1234.duel.before;
 
 public class Commands implements CommandExecutor {
     private void send_help(CommandSender sender) {
@@ -39,11 +38,11 @@ public class Commands implements CommandExecutor {
                 } /*길이가 1일시*/ else if (args.length >= 2) {
                     Player player = Bukkit.getPlayerExact(args[1]);
                     if (player != null && (args[0].equals("accept") || args[0].equals("deny") || args[0].equals("invite"))) {
-                        if (before.check_playing()) {
+                        if (Before.check_playing()) {
                             sender.sendMessage("굳");
                             switch (args[0]) {
                                 case "accept":
-                                    before.before_setting(null, null);
+                                    Before.before_setting(null, null);
                                 case "invite":
 
                                 case "deny":
