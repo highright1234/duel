@@ -20,7 +20,7 @@ class DuelPlugin: JavaPlugin() {
     override fun onEnable() {
         load()
         logger.info("Plugin has enabled.")
-        getCommand("duel")?.setExecutor(Commands())
+        getCommand("duel")?.setExecutor(Commands(this))
         getCommand("duel")?.tabCompleter = ArgumentForCommands()
 
         getCommand("duelitem")?.setExecutor(GUIItemAdder())
