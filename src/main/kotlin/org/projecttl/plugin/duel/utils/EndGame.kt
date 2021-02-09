@@ -4,7 +4,7 @@ import com.github.highright1234.duel.Before
 import org.bukkit.entity.Player
 import org.projecttl.plugin.duel.DuelPlugin
 
-class EndGame(private val plugin: DuelPlugin, private var getKiller: Player, private var getDeadMan: Player) {
+class EndGame(val plugin: DuelPlugin, private var getKiller: Player, private var getDeadMan: Player) {
 
     private val getKillStatus: Int = plugin.duelConfig().getInt("duel.${getKiller.name}.status.kill")
     private val getDeathStatus: Int = plugin.duelConfig().getInt("duel.${getDeadMan.name}.status.death")

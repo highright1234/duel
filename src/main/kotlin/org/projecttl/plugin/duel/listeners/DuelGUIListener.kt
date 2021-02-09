@@ -8,7 +8,7 @@ import org.bukkit.event.Listener
 import org.bukkit.event.block.Action
 import org.bukkit.event.player.PlayerInteractEvent
 import org.projecttl.api.inventorygui.utils.AddGuiItem
-import org.projecttl.plugin.duel.utils.SettingVoid
+import org.projecttl.plugin.duel.utils.GetVoidItem
 
 class DuelGUIListener: Listener {
 
@@ -60,33 +60,33 @@ class DuelGUIListener: Listener {
 
                         guiItem.onCreateExitButton(it, 44)
 
-                        SettingVoid(it, 0, voidName)
-                        SettingVoid(it, 1, voidName)
-                        SettingVoid(it, 2, voidName)
-                        SettingVoid(it, 3, voidName)
-                        SettingVoid(it, 4, voidName)
-                        SettingVoid(it, 5, voidName)
-                        SettingVoid(it, 6, voidName)
-                        SettingVoid(it, 7, voidName)
-                        SettingVoid(it, 8, voidName)
+                        GetVoidItem(it, 0, voidName)
+                        GetVoidItem(it, 1, voidName)
+                        GetVoidItem(it, 2, voidName)
+                        GetVoidItem(it, 3, voidName)
+                        GetVoidItem(it, 4, voidName)
+                        GetVoidItem(it, 5, voidName)
+                        GetVoidItem(it, 6, voidName)
+                        GetVoidItem(it, 7, voidName)
+                        GetVoidItem(it, 8, voidName)
 
-                        SettingVoid(it, 9, voidName)
-                        SettingVoid(it, 17, voidName)
+                        GetVoidItem(it, 9, voidName)
+                        GetVoidItem(it, 17, voidName)
 
-                        SettingVoid(it, 18, voidName)
-                        SettingVoid(it, 26, voidName)
+                        GetVoidItem(it, 18, voidName)
+                        GetVoidItem(it, 26, voidName)
 
-                        SettingVoid(it, 27, voidName)
-                        SettingVoid(it, 35, voidName)
+                        GetVoidItem(it, 27, voidName)
+                        GetVoidItem(it, 35, voidName)
 
-                        SettingVoid(it, 36, voidName)
-                        SettingVoid(it, 37, voidName)
-                        SettingVoid(it, 38, voidName)
-                        SettingVoid(it, 39, voidName)
-                        SettingVoid(it, 40, voidName)
-                        SettingVoid(it, 41, voidName)
-                        SettingVoid(it, 42, voidName)
-                        SettingVoid(it, 43, voidName)
+                        GetVoidItem(it, 36, voidName)
+                        GetVoidItem(it, 37, voidName)
+                        GetVoidItem(it, 38, voidName)
+                        GetVoidItem(it, 39, voidName)
+                        GetVoidItem(it, 40, voidName)
+                        GetVoidItem(it, 41, voidName)
+                        GetVoidItem(it, 42, voidName)
+                        GetVoidItem(it, 43, voidName)
 
                         it
                     }

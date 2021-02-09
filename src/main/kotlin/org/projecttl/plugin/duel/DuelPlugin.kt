@@ -23,22 +23,23 @@ class DuelPlugin: JavaPlugin() {
 
     override fun onEnable() {
 
-        logger.info("Language Initiallizing...")
+        logger.info("Language Initializing...")
 
         val lib = LangLib.getInstance()
-        val korean = lib.getLanguage("ko_KR")
-        korean.addNode("plugin_enabled", "플러그인이 활성화되었습니다.")
-        korean.addNode("plugin_disabled", "플러그인이 비활성화되었습니다.")
-        korean.addNode("duel_invite_command", "/duel invite <플레이어이름>")
-        korean.addNode("duel_accept_command", "/duel accept <플레이어이름>")
-        korean.addNode("duel_deny_command", "/duel deny <플레이어이름>")
-        korean.addNode("duel_help_duel_invite", "1. 듀얼신청: {0}")
-        korean.addNode("duel_help_duel_accept", "2. 듀얼수락: {0}")
-        korean.addNode("duel_help_duel_deny", "3. 듀얼거절: {0}")
-        korean.addNode("game_already_working", "게임이 이미 작동중입니다.")
-        korean.addNode("some_already_playing", "이미 누군가 플레이중입니다")
-        korean.addNode("player_offline", "플레이어가 오프라인입니다!")
-        korean.addNode("could_run_by_player", "이 커맨드는 플레이어만 실행할 수 있습니다!")
+        val korean = lib.getLanguage("ko_KR").also {
+            it.addNode("plugin_enabled", "플러그인이 활성화되었습니다.")
+            it.addNode("plugin_disabled", "플러그인이 비활성화되었습니다.")
+            it.addNode("duel_invite_command", "/duel invite <플레이어이름>")
+            it.addNode("duel_accept_command", "/duel accept <플레이어이름>")
+            it.addNode("duel_deny_command", "/duel deny <플레이어이름>")
+            it.addNode("duel_help_duel_invite", "1. 듀얼신청: {0}")
+            it.addNode("duel_help_duel_accept", "2. 듀얼수락: {0}")
+            it.addNode("duel_help_duel_deny", "3. 듀얼거절: {0}")
+            it.addNode("game_already_working", "게임이 이미 작동중입니다.")
+            it.addNode("some_already_playing", "이미 누군가 플레이중입니다")
+            it.addNode("player_offline", "플레이어가 오프라인입니다!")
+            it.addNode("could_run_by_player", "이 커맨드는 플레이어만 실행할 수 있습니다!")
+        }
         selectedLanguage = korean
 
         load()
@@ -52,6 +53,7 @@ class DuelPlugin: JavaPlugin() {
 
         manager.registerEvents(DuelGUIListener(), this)
         manager.registerEvents(PlayerDeathListener(this), this)
+
         /* 하이라이트를 위한 메뉴얼
          * Command: getCommand("example")?.setExecutor(ExampleClass())
          * Listener: manager.registerEvents(ExampleClass(), this)

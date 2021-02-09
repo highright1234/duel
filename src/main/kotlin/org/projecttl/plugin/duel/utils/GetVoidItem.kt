@@ -4,7 +4,7 @@ import org.bukkit.Material
 import org.bukkit.inventory.Inventory
 import org.projecttl.api.inventorygui.utils.AddGuiItem
 
-class SettingVoid(inventory: Inventory, inventoryLocation: Int, voidName: String): AddGuiItem() {
+class GetVoidItem(inventory: Inventory, inventoryLocation: Int, voidName: String): AddGuiItem() {
 
     // This is void from gui
     init {
