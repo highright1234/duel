@@ -9,7 +9,11 @@ import org.projecttl.plugin.duel.commands.GUIItemAdder
 import org.projecttl.plugin.duel.commands.arguments.ArgumentForItemAdder
 import org.projecttl.plugin.duel.listeners.DuelGUIListener
 import org.projecttl.plugin.duel.listeners.PlayerDeathListener
+import xyz.namutree0345.langlib.LangLib
+import xyz.namutree0345.langlib.structures.LanguageStructure
 import java.io.File
+
+var selectedLanguage: LanguageStructure? = null
 
 class DuelPlugin: JavaPlugin() {
 
@@ -18,8 +22,28 @@ class DuelPlugin: JavaPlugin() {
     private val manager = server.pluginManager
 
     override fun onEnable() {
+
+        logger.info("Language Initiallizing...")
+
+        val lib = LangLib.getInstance()
+        val korean = lib.getLanguage("ko_KR")
+        korean.addNode("plugin_enabled", "플러그인이 활성화되었습니다.")
+        korean.addNode("plugin_disabled", "플러그인이 비활성화되었습니다.")
+        korean.addNode("duel_invite_command", "/duel invite <플레이어이름>")
+        korean.addNode("duel_accept_command", "/duel accept <플레이어이름>")
+        korean.addNode("duel_deny_command", "/duel deny <플레이어이름>")
+        korean.addNode("duel_help_duel_invite", "1. 듀얼신청: {0}")
+        korean.addNode("duel_help_duel_accept", "2. 듀얼수락: {0}")
+        korean.addNode("duel_help_duel_deny", "3. 듀얼거절: {0}")
+        korean.addNode("game_already_working", "게임이 이미 작동중입니다.")
+        korean.addNode("some_already_playing", "이미 누군가 플레이중입니다")
+        korean.addNode("player_offline", "플레이어가 오프라인입니다!")
+        korean.addNode("could_run_by_player", "이 커맨드는 플레이어만 실행할 수 있습니다!")
+        selectedLanguage = korean
+
         load()
-        logger.info("Plugin has enabled.")
+
+        logger.info(selectedLanguage!!.getNode("plugin_enabled"))
         getCommand("duel")?.setExecutor(Commands(this))
         getCommand("duel")?.tabCompleter = ArgumentForCommands()
 
@@ -37,7 +61,7 @@ class DuelPlugin: JavaPlugin() {
 
     override fun onDisable() {
         save()
-        logger.info("Plugin has disabled.")
+        logger.info(selectedLanguage!!.getNode("plugin_disabled"))
     }
 
     private fun load() {

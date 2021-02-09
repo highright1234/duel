@@ -7,13 +7,16 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.projecttl.plugin.duel.DuelPlugin;
+import org.projecttl.plugin.duel.DuelPluginKt;
+import xyz.namutree0345.langlib.structures.LanguageStructure;
 
 public class Commands implements CommandExecutor {
+    LanguageStructure ls = DuelPluginKt.getSelectedLanguage();
     private void send_help(CommandSender sender) {
         sender.sendMessage("=========================");
-        sender.sendMessage("1. 듀얼신청: /duel invite <플레이어이름>");
-        sender.sendMessage("2. 듀얼수락: /duel accept <플레이어이름>");
-        sender.sendMessage("3. 듀얼거절: /duel deny <플레이어 이름>");
+        sender.sendMessage(ls.getNode("duel_help_duel_invite", ls.getNode("duel_invite_command")));
+        sender.sendMessage(ls.getNode("duel_help_duel_accept", ls.getNode("duel_accept_command")));
+        sender.sendMessage(ls.getNode("duel_help_duel_deny", ls.getNode("duel_deny_command")));
         sender.sendMessage("=========================");
     }
 
