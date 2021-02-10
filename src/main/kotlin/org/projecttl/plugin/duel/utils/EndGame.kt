@@ -12,7 +12,7 @@ class EndGame(val plugin: DuelPlugin, private var getKiller: Player, private var
     init {
         Before.playing = false
         plugin.duelConfig().set("duel.${getKiller.name}.status.kill", getKillStatus + 1)
-        plugin.duelConfig().set("duel.${getDeadMan.name}.status.kill", getDeathStatus + 1)
+        plugin.duelConfig().set("duel.${getDeadMan.name}.status.death", getDeathStatus + 1) // Fix error [ kill -> death ]
 
         plugin.server.scheduler.cancelTasks(plugin)
     }
