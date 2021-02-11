@@ -1,14 +1,13 @@
 package org.projecttl.plugin.duel.listeners
 
-import org.bukkit.Bukkit
 import org.bukkit.ChatColor
 import org.bukkit.Material
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.block.Action
 import org.bukkit.event.player.PlayerInteractEvent
-import org.projecttl.api.inventorygui.utils.AddGuiItem
-import org.projecttl.plugin.duel.utils.GetVoidItem
+import org.bukkit.inventory.ItemStack
+import org.projecttl.api.inventorygui.utils.CreateGUI
 
 class DuelGUIListener: Listener {
 
@@ -19,79 +18,63 @@ class DuelGUIListener: Listener {
 
     @EventHandler
     fun onGuiOpen(event: PlayerInteractEvent) {
-        val guiItem = AddGuiItem()
-
         val player = event.player
         val action = event.action
 
         if (action == Action.RIGHT_CLICK_AIR || action == Action.RIGHT_CLICK_BLOCK) {
             if (player.inventory.itemInMainHand.type == Material.CLOCK) {
                 if (player.inventory.itemInMainHand.itemMeta.displayName === displayName) {
-                    val inventory = Bukkit.createInventory(null, 45, displayName).let {
-                        guiItem.onCreateItem(
-                            it,
-                            20,
-                            Material.GRASS,
+                    val createGUI: CreateGUI = CreateGUI(45, displayName).let {
+                        it.setItem(
+                            ItemStack(Material.GRASS),
                             "${ChatColor.DARK_GREEN}Grassland",
                             listOf("${ChatColor.GOLD}You can play Grassland map."),
-                            1,
-                            false
+                            20
                         )
 
-                        guiItem.onCreateItem(
-                            it,
-                            16,
-                            Material.IRON_SWORD,
+                        it.setItem(
+                            ItemStack(Material.IRON_SWORD),
                             killStatus,
-                            listOf(null),
-                            1,
-                            false
+                            16
                         )
 
-                        guiItem.onCreateItem(
-                            it,
-                            16,
-                            Material.RED_BANNER,
+                        it.setItem(ItemStack(Material.RED_BANNER),
                             deathStatus,
-                            listOf(null),
-                            1,
-                            false
+                            17
                         )
 
-                        guiItem.onCreateExitButton(it, 44)
+                        it.setItem(ItemStack(Material.BLACK_STAINED_GLASS_PANE), voidName, 0,)
+                        it.setItem(ItemStack(Material.BLACK_STAINED_GLASS_PANE), voidName, 1,)
+                        it.setItem(ItemStack(Material.BLACK_STAINED_GLASS_PANE), voidName, 2,)
+                        it.setItem(ItemStack(Material.BLACK_STAINED_GLASS_PANE), voidName, 3,)
+                        it.setItem(ItemStack(Material.BLACK_STAINED_GLASS_PANE), voidName, 4,)
+                        it.setItem(ItemStack(Material.BLACK_STAINED_GLASS_PANE), voidName, 5,)
+                        it.setItem(ItemStack(Material.BLACK_STAINED_GLASS_PANE), voidName, 6,)
+                        it.setItem(ItemStack(Material.BLACK_STAINED_GLASS_PANE), voidName, 7,)
+                        it.setItem(ItemStack(Material.BLACK_STAINED_GLASS_PANE), voidName, 8,)
 
-                        GetVoidItem(it, 0, voidName)
-                        GetVoidItem(it, 1, voidName)
-                        GetVoidItem(it, 2, voidName)
-                        GetVoidItem(it, 3, voidName)
-                        GetVoidItem(it, 4, voidName)
-                        GetVoidItem(it, 5, voidName)
-                        GetVoidItem(it, 6, voidName)
-                        GetVoidItem(it, 7, voidName)
-                        GetVoidItem(it, 8, voidName)
+                        it.setItem(ItemStack(Material.BLACK_STAINED_GLASS_PANE), voidName, 9)
+                        it.setItem(ItemStack(Material.BLACK_STAINED_GLASS_PANE), voidName, 17)
 
-                        GetVoidItem(it, 9, voidName)
-                        GetVoidItem(it, 17, voidName)
+                        it.setItem(ItemStack(Material.BLACK_STAINED_GLASS_PANE), voidName, 18)
+                        it.setItem(ItemStack(Material.BLACK_STAINED_GLASS_PANE), voidName, 26)
 
-                        GetVoidItem(it, 18, voidName)
-                        GetVoidItem(it, 26, voidName)
+                        it.setItem(ItemStack(Material.BLACK_STAINED_GLASS_PANE), voidName, 27)
+                        it.setItem(ItemStack(Material.BLACK_STAINED_GLASS_PANE), voidName, 35)
 
-                        GetVoidItem(it, 27, voidName)
-                        GetVoidItem(it, 35, voidName)
-
-                        GetVoidItem(it, 36, voidName)
-                        GetVoidItem(it, 37, voidName)
-                        GetVoidItem(it, 38, voidName)
-                        GetVoidItem(it, 39, voidName)
-                        GetVoidItem(it, 40, voidName)
-                        GetVoidItem(it, 41, voidName)
-                        GetVoidItem(it, 42, voidName)
-                        GetVoidItem(it, 43, voidName)
+                        it.setItem(ItemStack(Material.BLACK_STAINED_GLASS_PANE), voidName, 36)
+                        it.setItem(ItemStack(Material.BLACK_STAINED_GLASS_PANE), voidName, 37)
+                        it.setItem(ItemStack(Material.BLACK_STAINED_GLASS_PANE), voidName, 38)
+                        it.setItem(ItemStack(Material.BLACK_STAINED_GLASS_PANE), voidName, 39)
+                        it.setItem(ItemStack(Material.BLACK_STAINED_GLASS_PANE), voidName, 40)
+                        it.setItem(ItemStack(Material.BLACK_STAINED_GLASS_PANE), voidName, 41)
+                        it.setItem(ItemStack(Material.BLACK_STAINED_GLASS_PANE), voidName, 42)
+                        it.setItem(ItemStack(Material.BLACK_STAINED_GLASS_PANE), voidName, 43)
 
                         it
                     }
 
-                    player.openInventory(inventory)
+                    createGUI.openInventory(player)
                 }
             }
         }
