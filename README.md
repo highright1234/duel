@@ -23,7 +23,3 @@
 
 ## 연락
 연락은 디스코드 `하이라이트|HighRight#1051` 혹은, [이곳](https://discord.gg/F5MFkYMPac)
-
-
-#THIS PROJECT IS STOPPED
-==========
