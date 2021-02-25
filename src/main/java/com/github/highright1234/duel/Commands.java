@@ -10,6 +10,8 @@ import org.projecttl.plugin.duel.DuelPlugin;
 import org.projecttl.plugin.duel.DuelPluginKt;
 import xyz.namutree0345.langlib.structures.LanguageStructure;
 
+import static com.github.highright1234.duel.DuelSend.*;
+
 public class Commands implements CommandExecutor {
     LanguageStructure ls = DuelPluginKt.getSelectedLanguage();
     private void send_help(CommandSender sender) {
@@ -30,7 +32,6 @@ public class Commands implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (command.getName().equals("duel")) {
             if (sender instanceof Player) {
-                Before before = new Before(plugin);
 
                 if (args.length == 1) {
                     if (!Before.playing) {
@@ -58,11 +59,11 @@ public class Commands implements CommandExecutor {
                             sender.sendMessage("굳");
                             switch (args[0]) {
                                 case "accept":
-                                    before.before_setting((Player) sender, player);
+                                    duel_accept((Player) sender, player);
                                 case "invite":
-
+                                    duel_send((Player) sender, player);
                                 case "deny":
-
+                                    duel_deny((Player) sender, player);
                             }
                          } else {
                             sender.sendMessage("이미 누군가 플레이중입니다");
