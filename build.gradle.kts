@@ -20,7 +20,7 @@ dependencies {
     compileOnly("mysql:mysql-connector-java:8.0.23")
 
     compileOnly("com.destroystokyo.paper:paper-api:1.16.5-R0.1-SNAPSHOT")
-    compileOnly("com.github.ProjectTL12345:InventoryGUI:1.2v")
+    compileOnly("com.github.ProjectTL12345:InventoryGUI:2.0.0")
 }
 
 val shade = configurations.create("shade")
